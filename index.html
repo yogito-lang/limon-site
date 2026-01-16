@@ -1,226 +1,121 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Yakup Usta Çiğköfte - Doritos Edition</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Arial Black', Gadget, sans-serif; background: #1a1a1a; color: white; overflow: hidden; margin: 0; }
-        .page { position: absolute; inset: 0; display: none; flex-direction: column; }
-        .active-page { display: flex; }
+  <meta charset="UTF-8">
+  <title>Limonya Resmi Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .shop-bg {
-            height: 40%;
-            background-color: #f3f4f6;
-            background-image: radial-gradient(#d1d5db 1px, transparent 1px), linear-gradient(to bottom, #e5e7eb 2px, transparent 2px);
-            background-size: 30px 30px, 100% 30px;
-            position: relative;
-            border-bottom: 6px solid #444;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        .shelf {
-            width: 80%; height: 8px; background: #8b4513; margin-top: 30px;
-            box-shadow: 0 4px 5px rgba(0,0,0,0.3); position: relative;
-        }
-        .shelf::after { content: '🥫 🍯 🥤 🇹🇷 🧿 🕋'; position: absolute; top: -22px; left: 15px; font-size: 18px; }
+    body {
+      background: #111;
+      color: white;
+      overflow-x: hidden;
+    }
 
-        .main-tabela {
-            width: 100%; background: #b91c1c; color: #fbbf24; padding: 8px;
-            text-align: center; font-size: 1.4rem; border-bottom: 3px solid #fbbf24; z-index: 50;
-        }
+    /* AÇILIŞ EKRANI */
+    #splash {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #FFD700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 1s ease;
+    }
 
-        #customer-area { position: absolute; bottom: 0; width: 100%; display: flex; flex-direction: column; align-items: center; z-index: 20; }
-        .speech-bubble {
-            background: white; color: #1a1a1a; padding: 10px 15px; border-radius: 15px;
-            border: 3px solid #b91c1c; font-size: 1.1rem; font-weight: 900; margin-bottom: 8px;
-            position: relative; box-shadow: 0 5px 10px rgba(0,0,0,0.2); max-width: 85%; text-align: center;
-        }
+    #splash h1 {
+      color: #111;
+      font-size: 32px;
+      animation: fadeIn 2s ease;
+    }
 
-        .counter-section {
-            height: 60%; background: #2d2d2d; padding: 10px; display: flex;
-            flex-direction: column; justify-content: space-between; gap: 8px; border-top: 4px solid #b91c1c;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-        .ingredients-box { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
-        .ing-btn {
-            background: #3d3d3d; border: 2px solid #555; padding: 8px; border-radius: 12px;
-            display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem;
-        }
-        .ing-btn:active { transform: scale(0.95); }
+    /* ANA İÇERİK */
+    .content {
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-        .serving-tray {
-            height: 50px; background: #1a1a1a; border: 2px solid #b91c1c;
-            border-radius: 12px; display: flex; align-items: center; justify-content: center;
-            font-size: 1.8rem; gap: 5px;
-        }
+    .content h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
 
-        .action-btns { display: flex; gap: 8px; height: 50px; }
-    </style>
+    .btn {
+      display: block;
+      margin: 20px auto;
+      padding: 15px;
+      max-width: 280px;
+      background: #FFD700;
+      color: #111;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #ffea70;
+    }
+
+    .discord {
+      background: #5865F2;
+      color: white;
+    }
+
+    .footer {
+      margin-top: 80px;
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
-    <div id="menu-page" class="page active-page items-center justify-center bg-zinc-900">
-        <h1 class="text-5xl text-red-600 mb-2">YAKUP USTA</h1>
-        <h2 class="text-xl text-yellow-500 mb-10">DORİTOSLU ÇİĞKÖFTE</h2>
-        <button onclick="startGame()" class="bg-red-600 px-12 py-5 rounded-full text-2xl font-black shadow-[0_6px_0_#7f1d1d] active:translate-y-1 transition-all">BAŞLA</button>
+  <!-- AÇILIŞ -->
+  <div id="splash">
+    <h1>Limonya Resmi Site</h1>
+  </div>
+
+  <!-- İÇERİK -->
+  <div class="content">
+    <h2>🍋 Limonya</h2>
+
+    <a class="btn" href="https://www.instagram.com/sakl_cennet.2_hobi_bahcesi?igsh=Mm1vanh5M2tjMHA0" target="_blank">
+      📸 Instagram
+    </a>
+
+    <div class="btn discord">
+      🎮 Discord: <br> <strong>Yigito31</strong>
     </div>
 
-    <div id="game-page" class="page">
-        <div class="main-tabela">YAKUP USTA ÇİĞKÖFTE</div>
-        <div class="shop-bg">
-            <div class="shelf"></div>
-            <div id="customer-area" style="opacity:0">
-                <div id="msg" class="speech-bubble">...</div>
-                <svg width="100" height="100" viewBox="0 0 100 120">
-                    <circle cx="50" cy="30" r="25" id="c-skin" fill="#ffdbac"/>
-                    <rect x="15" y="55" width="70" height="65" rx="15" fill="#1e40af"/>
-                </svg>
-            </div>
-        </div>
-
-        <div class="counter-section">
-            <div class="flex justify-between items-center">
-                <span class="text-yellow-500 font-black text-xl">KASA: <span id="cash">300</span>₺</span>
-                <button onclick="changePage('market-page')" class="bg-yellow-600 text-black px-4 py-1 rounded-lg font-bold text-xs">MARKET</button>
-            </div>
-
-            <div class="ingredients-box">
-                <button onclick="add('aci')" id="b-aci" class="ing-btn text-red-500"><span>🔥 ACI</span> <span id="s-aci" class="bg-black px-2 rounded">30</span></button>
-                <button onclick="add('yesil')" id="b-yesil" class="ing-btn text-green-500"><span>🥬 MARUL</span> <span id="s-yesil" class="bg-black px-2 rounded">30</span></button>
-                <button onclick="add('limon')" id="b-limon" class="ing-btn text-yellow-500"><span>🍋 LİMON</span> <span id="s-limon" class="bg-black px-2 rounded">30</span></button>
-                <button onclick="add('nar')" id="b-nar" class="ing-btn text-purple-400"><span>🍯 NAR</span> <span id="s-nar" class="bg-black px-2 rounded">30</span></button>
-                <button onclick="add('cips')" id="b-cips" class="ing-btn text-orange-500 col-span-2">
-                    <span>🍟 DORİTOS (CİPS)</span> <span id="s-cips" class="bg-black px-2 rounded">20</span>
-                </button>
-            </div>
-
-            <div id="tray" class="serving-tray"></div>
-
-            <div class="action-btns">
-                <button onclick="resetTray()" class="bg-zinc-700 px-4 rounded-xl font-bold text-xs">TEMİZLE</button>
-                <button id="serve-btn" onclick="serve()" class="flex-1 bg-green-600 rounded-xl font-black text-lg">SERVİS ET</button>
-            </div>
-        </div>
+    <div class="footer">
+      🛠️ Site geliştiriliyor
     </div>
+  </div>
 
-    <div id="market-page" class="page bg-zinc-900 p-6">
-        <h2 class="text-3xl text-yellow-500 font-black mb-6">MARKET</h2>
-        <div class="grid grid-cols-1 gap-3">
-            <button onclick="buy('aci')" class="bg-zinc-800 p-3 rounded-xl flex justify-between">🔥 ACI SOS (10) <span class="text-green-500">200₺</span></button>
-            <button onclick="buy('yesil')" class="bg-zinc-800 p-3 rounded-xl flex justify-between">🥬 MARUL (10) <span class="text-green-500">200₺</span></button>
-            <button onclick="buy('cips')" class="bg-zinc-800 p-3 rounded-xl flex justify-between text-orange-400">🍟 DORİTOS (10) <span class="text-green-500">250₺</span></button>
-            <button onclick="upgrade('auto')" id="up-auto" class="bg-blue-900/40 p-3 rounded-xl border border-blue-500 text-left text-sm">Otomatik Servis (150₺)</button>
-        </div>
-        <button onclick="changePage('game-page')" class="mt-8 w-full bg-red-600 py-4 rounded-xl font-bold">DÜKKANA DÖN</button>
-    </div>
+  <script>
+    // Açılış ekranını kaldır
+    setTimeout(() => {
+      document.getElementById("splash").style.opacity = "0";
+      setTimeout(() => {
+        document.getElementById("splash").style.display = "none";
+      }, 1000);
+    }, 2500);
+  </script>
 
-    <script>
-        let cash = 300;
-        let stocks = { aci: 30, yesil: 30, limon: 30, nar: 30, cips: 20 };
-        let tray = [];
-        let order = null;
-        let autoServe = false;
-        let audio = new (window.AudioContext || window.webkitAudioContext)();
-
-        function play(f, t, d) {
-            let o = audio.createOscillator(); let g = audio.createGain();
-            o.type = t; o.frequency.value = f; o.connect(g); g.connect(audio.destination);
-            g.gain.setValueAtTime(0.1, audio.currentTime); o.start(); o.stop(audio.currentTime + d);
-        }
-
-        const missions = [
-            {m: "Usta, Doritoslu olsun çıtır çıtır!", v: ["cips", "yesil"]},
-            {m: "Bol acılı, bol cipsli Yakup Usta!", v: ["aci", "cips"]},
-            {m: "Sadece marul ve limon yeğenim.", v: ["yesil", "limon"]},
-            {m: "Her şeyi koy, cipsi de unutma!", v: ["aci", "yesil", "limon", "nar", "cips"]},
-            {m: "Nar ekşili ve cipsli bir dürüm.", v: ["nar", "cips"]}
-        ];
-
-        function changePage(id) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
-            document.getElementById(id).classList.add('active-page');
-            updateUI();
-        }
-
-        function updateUI() {
-            document.getElementById('cash').innerText = cash;
-            for(let k in stocks) {
-                document.getElementById('s-'+k).innerText = stocks[k];
-                document.getElementById('b-'+k).disabled = stocks[k] <= 0;
-            }
-        }
-
-        function add(type) {
-            if(stocks[type] > 0 && tray.length < 5) {
-                stocks[type]--;
-                tray.push(type);
-                play(type === 'cips' ? 300 : 500, 'sine', 0.1);
-                renderTray();
-                updateUI();
-                if(autoServe) checkAuto();
-            }
-        }
-
-        function renderTray() {
-            const m = {aci:'🔥',yesil:'🥬',limon:'🍋',nar:'🍯',cips:'🍟'};
-            document.getElementById('tray').innerHTML = tray.map(i => `<span>${m[i]}</span>`).join('');
-        }
-
-        function resetTray() { tray = []; renderTray(); updateUI(); }
-
-        function serve() {
-            if(!order || tray.length === 0) return;
-            const target = [...new Set(order.v)].sort().join();
-            const current = [...new Set(tray)].sort().join();
-            const area = document.getElementById('customer-area');
-
-            if(target === current) {
-                cash += 80 + (tray.includes('cips') ? 20 : 0); // Doritoslu sipariş daha pahalı
-                play(900, 'sine', 0.2);
-                area.style.opacity = "0";
-            } else {
-                cash = Math.max(0, cash - 30);
-                play(150, 'sawtooth', 0.4);
-                area.style.opacity = "0";
-            }
-            order = null;
-            setTimeout(nextCustomer, 1000);
-        }
-
-        function checkAuto() {
-            if(!order) return;
-            const target = [...new Set(order.v)].sort().join();
-            const current = [...new Set(tray)].sort().join();
-            if(target === current) setTimeout(serve, 500);
-        }
-
-        function nextCustomer() {
-            tray = []; renderTray();
-            order = missions[Math.floor(Math.random()*missions.length)];
-            const area = document.getElementById('customer-area');
-            document.getElementById('msg').innerText = order.m;
-            document.getElementById('c-skin').setAttribute('fill', `hsl(${Math.random()*360}, 50%, 75%)`);
-            area.style.opacity = "1";
-            updateUI();
-        }
-
-        function buy(k) { 
-            let cost = k === 'cips' ? 250 : 200;
-            if(cash >= cost) { cash -= cost; stocks[k] += 10; updateUI(); } 
-        }
-
-        function upgrade(t) { if(!autoServe && cash >= 150) { cash -= 150; autoServe = true; updateUI(); } }
-
-        function startGame() {
-            if(audio.state === 'suspended') audio.resume();
-            changePage('game-page');
-            nextCustomer();
-        }
-    </script>
 </body>
-                                                                                                          </html>
-  
+</html>
